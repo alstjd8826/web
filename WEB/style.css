@@ -1,0 +1,38 @@
+body{
+  margin 0;
+}
+  a {
+    color:black;
+    text-decoration:  none;
+  }
+  #active{
+    color : red;
+  }
+  .saw{
+    color : gray;
+  }
+  /** id 선택자 > class 선택자 > 태그 선택자 순으로 파워가 쎄다. 좀 더 구체적인 것이 포괄적인 것 보다 파워가 쎄게 설정 해놓음.
+  전체적으로 설정하고 세부적으로 설정하면 세부적인 설정값이 인식 되게 하기 위함 */
+  h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:20px;
+  }
+  ol{
+    border-right:1px solid gray;
+    width:100px;
+    margin:0;
+    padding:20px;
+  }
+  #grid{
+    display : grid;
+    grid-template-columns: 150px 1fr
+  }
+  #grid ol{
+    padding-left: 33px;
+  }
+  #article{
+    padding-left: 25px;
+  }
