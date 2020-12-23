@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>line-height</title>
+  <style>
+.wrap { font-size: 20px; line-height: 2; }
+.parent { font-size: 1.5em; line-height: 200%; }
+.child { font-size: 15px; }
+  </style>
+  <!-- line-height값이 자식요소로 상속되었을때의 계산방식을 기억해야 한다. 
+
+  숫자일경우 자식폰트 사이즈에 의해 다시 계산되어 나오지만
+  
+  퍼센트일경우 퍼센트에 이미 계산된 px값이 그대로 상속된다. (중요) -->
+</head>
+
+<body>
+  <div class="wrap">
+
+  <div class="parent">  
+  
+  <div class="child">line-height 값 계산</div>
+  
+  </div>
+  
+  </div>
+</body>
+</html>
