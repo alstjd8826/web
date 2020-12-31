@@ -1,0 +1,26 @@
+html,
+body,
+.wrap {
+    height: 100%; /* 부모요소에 height 100% 부여 */
+}
+.header{
+    position: fixed;  
+    top: 0; left: 0; right: 0;
+    height: 100px;
+    background-color: lightgreen; 
+}
+.container {
+    min-height: 100%; /* 최소높이값 100% 설정 */
+    padding: 100px 0; /* height, footer 뒤로 가려진 영역 노출 */
+    box-sizing: border-box; /*padding값을 높이에서 무시하도록 속성 추가 */
+}
+.content{
+    height: 1000px;
+    background-color: lightsalmon;
+}
+.footer{
+    position: fixed;  
+    bottom: 0; left: 0; right: 0; 
+    height:100px;
+    background-color: lightblue;
+}

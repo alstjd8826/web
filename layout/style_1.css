@@ -1,0 +1,19 @@
+
+.wrap {
+    min-width: 800px; /* 최소 가로길이 800px */
+    text-align: center;
+}
+.header{
+    height: 100px;
+    background-color: lightgreen; 
+}
+.content{
+    max-width: 1200px; /* 최대 가로길이 1200px */
+    height: 300px;
+    background-color: lightsalmon;
+    margin: 0 auto; /* 블럭요소 가운데 정렬 */
+}
+.footer{
+    height:100px;
+    background-color: lightblue;
+}

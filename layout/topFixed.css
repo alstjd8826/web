@@ -1,0 +1,25 @@
+html,
+body,
+.wrap {
+   height: 100%;
+}
+
+.header{
+    position: fixed;  /* position 고정 */
+    top: 0; left: 0; right: 0; /* 상단 위치 */
+    height: 100px;
+    background-color: lightgreen; 
+}
+.container {
+    min-height: 100%; /* 최소 높이값 100% */
+    margin-top: -100px; /* 음수 마진으로 푸터의 높이만큼 끌어올려주기 */
+}
+.content{
+    height: 300px;
+    background-color: lightsalmon;
+    padding-top: 200px; /* 가려진 height의 높이값과 끌어올린 footer의 높이값을 합친 값을 padding-top으로 밀어줍니다. */
+}
+.footer{
+    height:100px;
+    background-color: lightblue;
+}

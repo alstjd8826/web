@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+
+html, body, .wrap{
+    height: 100%;
+}
+.header {
+    height:100px;
+    background-color: lightgreen;
+}
+.container {
+    display: table; /* 부모 요소에 display: table 추가 */
+    table-layout: fixed;
+    width: 800px;
+    min-height: 100%;
+    padding: 100px 0;
+    margin: -100px auto;
+    box-sizing: border-box; 
+}
+.content {
+    display: table-cell; /* 자식 요소에 display: table-cell 추가 */
+    width: 500px;/* 가로 사이즈 부여 ( aside가로길이 =  container 가로길이 - content 가로길이) */
+    height: 300px;
+    background-color: lightsalmon;
+    border-right: 5px solid #000;
+}
+.aside {
+    display: table-cell;/* 자식 요소에 display: table-cell 추가 */
+    height: 300px;
+    background-color: lightseagreen;
+}
+.footer {
+    height:100px;
+    background-color: cornflowerblue;
+}
