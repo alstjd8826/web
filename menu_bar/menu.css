@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* 기본 스타일 */
+body {
+    font-family: '나눔고딕', NanumGothic, Dotum, '돋움', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+body, ul, ol, li, div, a {
+    margin:0;
+    padding:0;
+}
+ul, ol {
+    list-style:none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*1단 메뉴*/
+
+.menuBar{
+    max-width: 700px;
+    min-width: 500px;
+    margin: 5px; /*외곽선 확인용*/
+}
+
+.menu{
+    display: table;
+    table-layout: fixed; /*메뉴 사이 간격을 동일하게 만든다.*/
+    width: 100%; /*부모의 너비값과 동일한 값을 상속 받음*/
+}
+
+.comp{
+    display: table-cell;
+}
+
+.item{
+    display: block; /*cell의 너비에 꽉 맞게 a링크 클릭범위를 넓혀준다.*/
+    height: 36px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    line-height: 36px; /*상하 가운데 정렬*/
+    color: #333;
+    text-align: center;
+}
+.comp + .comp .item{
+    margin-left: -1px;/*외곽선을 2px 짜리를 1px로 보이게 하기 위함*/
+}/*인접 선택자*/
+
+.comp:hover .item{
+    color: green;
+    font-weight: bold;
+}
+
+.comp.active .item{
+    position: relative; /*margin-left: -1px; 로 겹친 외곽선을 보이게 하기 위함*/
+    border-color: #555;
+    font-weight: bold;
+    color: #fff;   
+    background-color: gray;
+}
