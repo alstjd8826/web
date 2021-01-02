@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+html, body, ol {
+    margin:0;
+    padding:0;
+  }
+  ol {
+    list-style: none;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+  }
+  .main_wrap {
+    background-color: silver;
+  }
+  .main_list {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .main_list li {
+    float: left;
+    width: 90px;
+    height: 90px;  
+    line-height: 90px;
+    background-color: pink;
+  }
+  /*float 해제해주는 함수*/
+  .main_list:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  /*처음 li에는 마진 레프트를 주지않게 하기 위해 형제 선택자를 쓴다.*/
+  .main_list li + li {
+    margin-left: 15px;
+  }
+  .sub_list {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .sub_list li {
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    line-height: 48px;
+    background-color: olive;
+  }
+  .sub_list:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  /*우측여백을 갖지 않게 하기 위함*/
+  .sub_list li:nth-child(5n) {
+    margin-right: 0;
+  }

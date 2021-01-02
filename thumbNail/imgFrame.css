@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.img_wrap {
+    position: relative;
+    width: 200px;
+    height: 134px;
+}
+
+  /*이미지 위로 외곽선을 주기위해 가상 선택자를선택하여 클래스를 줄임.*/
+.img_wrap:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.15);
+}

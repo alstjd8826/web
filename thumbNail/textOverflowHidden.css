@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+p {
+    width: 200px;
+    background-color: yellow;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .elip1 {
+    overflow: hidden; /*고정너비를 넘어가는 글자를 안보이게함*/
+    text-overflow: ellipsis;/*고정너비를 넘어가는 글자 대신 ... 으로 대체*/
+    white-space: nowrap;/*고정너비를 넘어가면 아랫줄로 내려가는 것을 한줄에 나오게함*/
+  }
+  .elip2 {
+    max-height: 40px; /* webkit 외 브라우저 대응, line-height*line수 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .elip3 {
+    max-height: 60px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
