@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+
+.content {
+    height: 1000px;
+}
+
+/*팝업을 띄우기 위해 position 사용*/
+.popup {
+    position: fixed; 
+    /*딤드레이어를 스크롤을 내려도 가득차게 만들기 위해 absolute에서 fixed로 바꾸어준다*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*z-index는 position : relative가 있어야한다.*/
+.popup_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 150px;
+    padding-bottom: 50px;
+    margin: auto;
+    background: #fff;
+    z-index: 10; 
+}
+
+.text_area {
+    padding: 50px 30px 30px;
+    text-align: center;
+}
+
+.btn_area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+}
+
+.btn_area::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.btn {
+    float: left;
+    width: 50%;
+    height: 100%;
+    border: 0;
+    background: pink;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.no {
+    background: lightblue;
+}
+
+.popup_dimmed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
+}
