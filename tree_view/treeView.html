@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../tree_view/tree_fontello/css/fontello.css">
+    <style>
+        .tree{
+            color: grey;
+        }
+        ul{
+            list-style: none;
+            padding-left: 17px;
+        }
+        .tree *::before{
+            display: inline-block; 
+            /* before의 기본 속성은 inline이라서 width가 적용이 되지않아 바꾸어준다. */
+            width: 17px;
+            height: 17px;
+        }
+        .tree label {
+            cursor: pointer;
+        }
+        .tree label::before {
+            content: "\f256";
+            font-family: fontello;
+        }
+        .tree a {
+            text-decoration: none;
+            color: gray;
+        }
+        .tree a::before{
+            content: "\e800";
+            font-family: fontello;
+        }
+        input[type="checkbox"],
+        input[type="checkbox"]:checked~ul{
+            display: none;
+        }
+        input[type="checkbox"]:checked+label::before {
+            content: "\f255";
+            font-family: fontello;
+        }
+    </style>
+</head>
+<body>
+    <ul class="tree">
+        <li>
+            <input type="checkbox" id="root">
+            <label for="root">ROOT</label>
+            <ul id="node">
+                <li>
+                    <a href="https://opentutorials.org">node1</a>
+                </li>
+                <li>
+                    <a href="https://opentutorials.org">node2</a>
+                </li>
+                <li>
+                    <input type="checkbox" id="root2">
+                    <label for="root2">node3</label>
+                    <ul id="subNode">
+                        <li>
+                            <a href="https://opentutorials.org">node4</a>
+                        </li>
+                        <li>
+                            <a href="https://opentutorials.org">node5</a>
+                        </li>
+                        <li>
+                            <a href="https://opentutorials.org">node6</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://opentutorials.org">node7</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
